@@ -1,10 +1,24 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Falk bloggt",
+    "section": "",
+    "text": "Howto: ein Blog mit Quarto erstellen\n\n\n\n\n\n\ncode\n\n\n\n\n\n\n\n\n\nSep 9, 2025\n\n\nFalk\n\n\n\n\n\n\n\n\n\n\n\n\nGedanken\n\n\n\n\n\n\ntest\n\n\n\n\n\n\n\n\n\nSep 19, 2024\n\n\nFalk\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nSep 18, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 15, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
     "title": "Welcome To My Blog",
     "section": "",
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
   },
   {
     "objectID": "posts/howto quarto blog/howto quarto blog.html",
@@ -18,7 +32,14 @@
     "href": "posts/howto quarto blog/howto quarto blog.html#howto",
     "title": "Howto: ein Blog mit Quarto erstellen",
     "section": "Howto:",
-    "text": "Howto:\nein Blog mit Quarto auf Linux erstellen das die Daten auf GitHub speichert und dort veröffentlicht.\n\nQuarto ist ein Tool mit dem aus u.a. aus Jupyter Notebooks Dokumente erstellt werden können\nDokumente wie PDF und auch HTML und Blogs\n\n\n1. Quarto im Betriebssystem installieren\nauf Quarto die passende Installationsdatei auswählen und installieren.\n\n\n2. Eine virtuelle Umgebung mit python erstellen:\n\nin einem geeigneten Verzeichnis python -m venv meinblog ausführen.\ndanach Jupyter-Lab installieren pip install jupyterlab\n\n\n\n3. Ein neues Blog-Projekt erstellen:\nquarto create-project meinblog --type website:blog\nDie Blog Dateien liegen im Unterordner meinblog und sind erstmal .qmd Dateien. Ich werden aber mit Jupyter Notebooks arbeiten. Um einen neuen Blogeintrag zu erstellen wird im Ordner /meinblog/posts/ ein neuer Ordner angelegt und in diesem ein neues Notebook erstellt.\n\n\n4. Github Repository erstellen in dem nacher die Daten liegen sollen\n\nIn Github ein neues Repository erstellen. Der Name entspricht nachher der Adresse des Blog. Z.B. [- In Github ein neues Repository erstellen. Der Name entspricht nachher der Adresse des Blog. Z.B. “trashtest” -&gt; https://fandrelex.github.io/trashtest/\n\nTodo:\n\ninstallation von quarto (Betriebssystem nicht Python)\ninstallation von … keine Ahnung was kam da noch so? Eigentlich nur noch dei Virtuelle Umgebung erstellen mit python -m venv quarto-bog\nerzeugen eines Repos in Github\nerzeugen des “schlüssels” in Github\naktivieren des lokalen caches für den Schlüssel\nerstellen einer Seite\nveröffentlichen. Am besten mit einem Script, das alle schritte automatisch durchführt\n[ ]"
+    "text": "Howto:\nEin Blog mit Quarto erstellen das die Daten auf GitHub speichert und dort veröffentlicht.\n\nQuarto ist ein Tool mit dem aus u.a. aus Jupyter Notebooks Dokumente erstellt werden können\nDokumente wie PDF und auch HTML und Blogs\n\n\n1. Quarto auf dem Betriebssystem installieren\nauf Quarto die passende Installationsdatei auswählen und installieren.\n\n\n2. Eine virtuelle Umgebung mit Python erstellen:\n\nin einem geeigneten Verzeichnis python -m venv meinblog ausführen.\ndanach Jupyter-Lab installieren pip install jupyterlab\n\n\n\n3. Ein neues Blog-Projekt erstellen:\nquarto create-project meinblog --type website:blog\nDie Blog Dateien liegen im Unterordner meinblog und sind erstmal .qmd Dateien. Ich werden aber mit Jupyter Notebooks arbeiten. Um einen neuen Blogeintrag zu erstellen wird im Ordner /meinblog/posts/ ein neuer Ordner angelegt und in diesem ein neues Notebook erstellt.\n\n\n4. Github Repository erstellen in dem nacher die Daten liegen sollen\n\nIn Github ein neues Repository erstellen. Der Name entspricht nachher der Adresse des Blog. Z.B. “trashtest” -&gt; https://fandrelex.github.io/trashtest/\nnoch genauer beschreiben\npages aktivieren beschreiben\ngit erstellen im lokaen verzeinis beschreiben\n\n\n\n\n5. Dateitransfer vom lokalen System nach Github\nhierfür habe ich eine .cmd Datei erstellt, die den Blog rendert, die Dateien in ein ansonsten leeres Verzeinis (hier: _Github_online) kopiert und von da aus dann zu Github transferiert. Das Script sieht so aus:\nveroeffentlichen.cmd\nxcopy /S /C /Y C:\\xx\\myblog_fad\\_site\\* C:\\xx\\_GitHub_online\\\n\ncd _GitHub_online\n\ngit add .\ngit commit -m \"update\"\ngit push origin main"
+  },
+  {
+    "objectID": "posts/howto quarto blog/howto quarto blog.html#todo",
+    "href": "posts/howto quarto blog/howto quarto blog.html#todo",
+    "title": "Howto: ein Blog mit Quarto erstellen",
+    "section": "Todo:",
+    "text": "Todo:\n\ninstallation von quarto (Betriebssystem nicht Python)\ninstallation von … keine Ahnung was kam da noch so? Eigentlich nur noch dei Virtuelle Umgebung erstellen mit python -m venv quarto-bog\nerzeugen eines Repos in Github\nerzeugen des “schlüssels” in Github\naktivieren des lokalen caches für den Schlüssel\nerstellen einer Seite\nveröffentlichen. Am besten mit einem Script, das alle schritte automatisch durchführt\n[ ]"
   },
   {
     "objectID": "posts/howto quarto blog/howto quarto blog.html#dieses-howto-basiert-auf-der-online-dokuemntation-von-quarto",
@@ -26,20 +47,6 @@
     "title": "Howto: ein Blog mit Quarto erstellen",
     "section": "Dieses Howto basiert auf der Online Dokuemntation von Quarto:",
     "text": "Dieses Howto basiert auf der Online Dokuemntation von Quarto:\nCreating a Blog\n\n\nCode\nprint(\"hallo welt\")\n\n\nhallo welt"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Falk bloggt",
-    "section": "",
-    "text": "Howto: ein Blog mit Quarto erstellen\n\n\n\n\n\n\ncode\n\n\n\n\n\n\n\n\n\nSep 9, 2025\n\n\nFalk\n\n\n\n\n\n\n\n\n\n\n\n\nGedanken\n\n\n\n\n\n\ntest\n\n\n\n\n\n\n\n\n\nSep 19, 2024\n\n\nFalk\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nSep 18, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 15, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this blog"
   },
   {
     "objectID": "posts/Gedanken und Spielwiese/Gedanken und Spielwiese.html",
@@ -77,10 +84,10 @@
     "text": "\\[ f(x)= \\frac{1}{2} x^2 \\]"
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "This is a post with executable code."
+    "text": "About this blog"
   }
 ]

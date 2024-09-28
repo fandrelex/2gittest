@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.5.54">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -151,11 +151,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#howto" id="toc-howto" class="nav-link active" data-scroll-target="#howto">Howto:</a>
   <ul class="collapse">
-  <li><a href="#quarto-im-betriebssystem-installieren" id="toc-quarto-im-betriebssystem-installieren" class="nav-link" data-scroll-target="#quarto-im-betriebssystem-installieren">1. Quarto im Betriebssystem installieren</a></li>
-  <li><a href="#eine-virtuelle-umgebung-mit-python-erstellen" id="toc-eine-virtuelle-umgebung-mit-python-erstellen" class="nav-link" data-scroll-target="#eine-virtuelle-umgebung-mit-python-erstellen">2. Eine virtuelle Umgebung mit python erstellen:</a></li>
+  <li><a href="#quarto-auf-dem-betriebssystem-installieren" id="toc-quarto-auf-dem-betriebssystem-installieren" class="nav-link" data-scroll-target="#quarto-auf-dem-betriebssystem-installieren">1. Quarto auf dem Betriebssystem installieren</a></li>
+  <li><a href="#eine-virtuelle-umgebung-mit-python-erstellen" id="toc-eine-virtuelle-umgebung-mit-python-erstellen" class="nav-link" data-scroll-target="#eine-virtuelle-umgebung-mit-python-erstellen">2. Eine virtuelle Umgebung mit Python erstellen:</a></li>
   <li><a href="#ein-neues-blog-projekt-erstellen" id="toc-ein-neues-blog-projekt-erstellen" class="nav-link" data-scroll-target="#ein-neues-blog-projekt-erstellen">3. Ein neues Blog-Projekt erstellen:</a></li>
   <li><a href="#github-repository-erstellen-in-dem-nacher-die-daten-liegen-sollen" id="toc-github-repository-erstellen-in-dem-nacher-die-daten-liegen-sollen" class="nav-link" data-scroll-target="#github-repository-erstellen-in-dem-nacher-die-daten-liegen-sollen">4. Github Repository erstellen in dem nacher die Daten liegen sollen</a></li>
+  <li><a href="#dateitransfer-vom-lokalen-system-nach-github" id="toc-dateitransfer-vom-lokalen-system-nach-github" class="nav-link" data-scroll-target="#dateitransfer-vom-lokalen-system-nach-github">5. Dateitransfer vom lokalen System nach Github</a></li>
   </ul></li>
+  <li><a href="#todo" id="toc-todo" class="nav-link" data-scroll-target="#todo">Todo:</a></li>
   <li><a href="#dieses-howto-basiert-auf-der-online-dokuemntation-von-quarto" id="toc-dieses-howto-basiert-auf-der-online-dokuemntation-von-quarto" class="nav-link" data-scroll-target="#dieses-howto-basiert-auf-der-online-dokuemntation-von-quarto">Dieses Howto basiert auf der Online Dokuemntation von Quarto:</a></li>
   </ul>
 </nav>
@@ -200,17 +202,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>diese datei wurde aus dem ersten Versuch blog kopiert</p>
 <section id="howto" class="level2">
 <h2 class="anchored" data-anchor-id="howto">Howto:</h2>
-<p>ein Blog mit <a href="https://quarto.org/">Quarto</a> auf Linux erstellen das die Daten auf GitHub speichert und dort veröffentlicht.</p>
+<p>Ein Blog mit <a href="https://quarto.org/">Quarto</a> erstellen das die Daten auf GitHub speichert und dort veröffentlicht.</p>
 <blockquote class="blockquote">
 <p>Quarto ist ein Tool mit dem aus u.a. aus Jupyter Notebooks Dokumente erstellt werden können<br>
 Dokumente wie PDF und auch HTML und Blogs</p>
 </blockquote>
-<section id="quarto-im-betriebssystem-installieren" class="level3">
-<h3 class="anchored" data-anchor-id="quarto-im-betriebssystem-installieren">1. Quarto im Betriebssystem installieren</h3>
+<section id="quarto-auf-dem-betriebssystem-installieren" class="level3">
+<h3 class="anchored" data-anchor-id="quarto-auf-dem-betriebssystem-installieren">1. Quarto auf dem Betriebssystem installieren</h3>
 <p>auf <a href="https://quarto.org/docs/get-started/">Quarto</a> die passende Installationsdatei auswählen und installieren.</p>
 </section>
 <section id="eine-virtuelle-umgebung-mit-python-erstellen" class="level3">
-<h3 class="anchored" data-anchor-id="eine-virtuelle-umgebung-mit-python-erstellen">2. Eine virtuelle Umgebung mit python erstellen:</h3>
+<h3 class="anchored" data-anchor-id="eine-virtuelle-umgebung-mit-python-erstellen">2. Eine virtuelle Umgebung mit Python erstellen:</h3>
 <ul>
 <li>in einem geeigneten Verzeichnis <code>python -m venv meinblog</code> ausführen.</li>
 <li>danach Jupyter-Lab installieren <code>pip install jupyterlab</code></li>
@@ -224,9 +226,28 @@ Dokumente wie PDF und auch HTML und Blogs</p>
 <section id="github-repository-erstellen-in-dem-nacher-die-daten-liegen-sollen" class="level3">
 <h3 class="anchored" data-anchor-id="github-repository-erstellen-in-dem-nacher-die-daten-liegen-sollen">4. Github Repository erstellen in dem nacher die Daten liegen sollen</h3>
 <ul>
-<li>In Github ein neues Repository erstellen. Der Name entspricht nachher der Adresse des Blog. Z.B. [- In Github ein neues Repository erstellen. Der Name entspricht nachher der Adresse des Blog. Z.B. “trashtest” -&gt; <a href="https://fandrelex.github.io/trashtest/">https://fandrelex.github.io/trashtest/</a></li>
+<li>In Github ein neues Repository erstellen. Der Name entspricht nachher der Adresse des Blog. Z.B. “trashtest” -&gt; <a href="https://fandrelex.github.io/trashtest/">https://fandrelex.github.io/trashtest/</a></li>
+<li>noch genauer beschreiben</li>
+<li>pages aktivieren beschreiben</li>
+<li>git erstellen im lokaen verzeinis beschreiben</li>
+<li></li>
 </ul>
-<p>Todo:</p>
+</section>
+<section id="dateitransfer-vom-lokalen-system-nach-github" class="level3">
+<h3 class="anchored" data-anchor-id="dateitransfer-vom-lokalen-system-nach-github">5. Dateitransfer vom lokalen System nach Github</h3>
+<p>hierfür habe ich eine .cmd Datei erstellt, die den Blog rendert, die Dateien in ein ansonsten leeres Verzeinis (hier: <code>_Github_online</code>) kopiert und von da aus dann zu Github transferiert. Das Script sieht so aus:</p>
+<p>veroeffentlichen.cmd</p>
+<pre><code>xcopy /S /C /Y C:\xx\myblog_fad\_site\* C:\xx\_GitHub_online\
+
+cd _GitHub_online
+
+git add .
+git commit -m "update"
+git push origin main</code></pre>
+</section>
+</section>
+<section id="todo" class="level2">
+<h2 class="anchored" data-anchor-id="todo">Todo:</h2>
 <ul>
 <li><label><input type="checkbox" checked="">installation von quarto (Betriebssystem nicht Python)</label></li>
 <li><label><input type="checkbox" checked="">installation von … keine Ahnung was kam da noch so? Eigentlich nur noch dei Virtuelle Umgebung erstellen mit <code>python -m venv quarto-bog</code></label></li>
@@ -238,14 +259,13 @@ Dokumente wie PDF und auch HTML und Blogs</p>
 <li>[ ]</li>
 </ul>
 </section>
-</section>
 <section id="dieses-howto-basiert-auf-der-online-dokuemntation-von-quarto" class="level2">
 <h2 class="anchored" data-anchor-id="dieses-howto-basiert-auf-der-online-dokuemntation-von-quarto">Dieses Howto basiert auf der Online Dokuemntation von Quarto:</h2>
 <p><a href="https://quarto.org/docs/websites/website-blog.html">Creating a Blog</a></p>
 <div id="6da2ab50-786f-48ae-88d4-a9d61603af6a" class="cell" data-scrolled="true" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"hallo welt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"hallo welt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>hallo welt</code></pre>
