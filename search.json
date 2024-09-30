@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Übersicht",
+    "section": "",
+    "text": "Howto: ein Blog mit Quarto erstellen und diesen auf Github veröffentlichen\n\n\n\n\n\n\ncode\n\n\n\n\n\n\n\n\n\nSep 9, 2025\n\n\nFalk\n\n\n\n\n\n\n\n\n\n\n\n\nGedanken\n\n\n\n\n\n\ngedanken\n\n\n\n\n\n\n\n\n\nSep 19, 2024\n\n\nFalk\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "posts/howto quarto blog/howto quarto blog.html",
     "href": "posts/howto quarto blog/howto quarto blog.html",
     "title": "Howto: ein Blog mit Quarto erstellen und diesen auf Github veröffentlichen",
@@ -7,11 +14,11 @@
     "text": "diese datei wurde aus dem ersten Versuch blog kopiert"
   },
   {
-    "objectID": "posts/howto quarto blog/howto quarto blog.html#howtooo",
-    "href": "posts/howto quarto blog/howto quarto blog.html#howtooo",
+    "objectID": "posts/howto quarto blog/howto quarto blog.html#howtooi",
+    "href": "posts/howto quarto blog/howto quarto blog.html#howtooi",
     "title": "Howto: ein Blog mit Quarto erstellen und diesen auf Github veröffentlichen",
-    "section": "Howtooo:",
-    "text": "Howtooo:\nEin Blog mit Quarto erstellen das die Daten auf GitHub speichert und dort veröffentlicht.\n\nQuarto ist ein Tool mit dem aus u.a. aus Jupyter Notebooks Dokumente erstellt werden können\nDokumente wie PDF und auch HTML und Blogs\n\n\n1. Quartooo auf dem Betriebssystem installieren\nauf Quarto die passende Installationsdatei auswählen und installieren.\n\n\n2. Eine virtuelle Umgebung mit Python erstellen:\n\nin einem geeigneten Verzeichnis python -m venv meinblog ausführen.\ndanach Jupyter-Lab installieren pip install jupyterlab\n\n\n\n3. Ein neues Blog-Projekt erstellen:\nquarto create-project meinblog --type website:blog\nDie Blog Dateien liegen im Unterordner meinblog und sind erstmal .qmd Dateien. Ich werden aber mit Jupyter Notebooks arbeiten. Um einen neuen Blogeintrag zu erstellen wird im Ordner /meinblog/posts/ ein neuer Ordner angelegt und in diesem ein neues Notebook erstellt.\n\n\n4. Github Repository erstellen in dem nacher die Daten liegen sollen\n\nIn Github ein neues Repository erstellen. Der Name entspricht nachher der Adresse des Blog. Z.B. “trashtest” -&gt; https://fandrelex.github.io/trashtest/\nnoch genauer beschreiben\npages aktivieren beschreiben\ngit erstellen im lokaen verzeinis beschreiben\n\n\n\n\n5. Dateitransfer vom lokalen System nach Github\nhierfür habe ich eine .cmd Datei erstellt, die den Blog rendert, die Dateien in ein ansonsten leeres Verzeinis (hier: _Github_online) kopiert und von da aus dann zu Github transferiert. Das Script sieht so aus:\nveroeffentlichen.cmd\nxcopy /S /C /Y C:\\xx\\myblog_fad\\_site\\* C:\\xx\\_GitHub_online\\\n\ncd _GitHub_online\n\ngit add .\ngit commit -m \"update\"\ngit push origin main"
+    "section": "Howtooi:",
+    "text": "Howtooi:\nEin Blog mit Quarto erstellen das die Daten auf GitHub speichert und dort veröffentlicht.\n\nQuarto ist ein Tool mit dem aus u.a. aus Jupyter Notebooks Dokumente erstellt werden können\nDokumente wie PDF und auch HTML und Blogs\n\n\n1. Quartouu auf dem Betriebssystem installieren\nauf Quarto die passende Installationsdatei auswählen und installieren.\n\n\n2. Eine virtuelle Umgebung mit Python erstellen:\n\nin einem geeigneten Verzeichnis python -m venv meinblog ausführen.\ndanach Jupyter-Lab installieren pip install jupyterlab\n\n\n\n3. Ein neues Blog-Projekt erstellen:\nquarto create-project meinblog --type website:blog\nDie Blog Dateien liegen im Unterordner meinblog und sind erstmal .qmd Dateien. Ich werden aber mit Jupyter Notebooks arbeiten. Um einen neuen Blogeintrag zu erstellen wird im Ordner /meinblog/posts/ ein neuer Ordner angelegt und in diesem ein neues Notebook erstellt.\n\n\n4. Github Repository erstellen in dem nacher die Daten liegen sollen\n\nIn Github ein neues Repository erstellen. Der Name entspricht nachher der Adresse des Blog. Z.B. “trashtest” -&gt; https://fandrelex.github.io/trashtest/\nnoch genauer beschreiben\npages aktivieren beschreiben\ngit erstellen im lokaen verzeinis beschreiben\n\n\n\n\n5. Dateitransfer vom lokalen System nach Github\nhierfür habe ich eine .cmd Datei erstellt, die den Blog rendert, die Dateien in ein ansonsten leeres Verzeinis (hier: _Github_online) kopiert und von da aus dann zu Github transferiert. Das Script sieht so aus:\nveroeffentlichen.cmd\nquarto render ./myblog_fad/\n\ncd _GitHub_online\ngit pull\n\nxcopy /S /C /Y C:\\Python\\Daten\\virtal_environments\\quarto_blog2\\myblog_fad\\_site\\* C:\\Python\\Daten\\virtal_environments\\quarto_blog2\\_GitHub_online\\\n\ngit add .\ngit commit -m \"update\"\ngit push https://fandrelex:_XXXX_@github.com/fandrelex/2gittest.git\nDa ich von zwei Systemen aus arbeite, muss ich zuerst im temporären Verzeichnis “GitHub_online” den aktuellen Zustand von git herunterladen. Danach kann ich erst die Dateien in dieses Verzeinis kopieren und den commit usw. durchführen."
   },
   {
     "objectID": "posts/howto quarto blog/howto quarto blog.html#todo",
@@ -26,20 +33,6 @@
     "title": "Howto: ein Blog mit Quarto erstellen und diesen auf Github veröffentlichen",
     "section": "Dieses Howto basiert auf der Online Dokuemntation von Quarto:",
     "text": "Dieses Howto basiert auf der Online Dokuemntation von Quarto:\nCreating a Blog\n\n\nCode\nprint(\"hallo welt\")\n\n\nhallo welt"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Übersicht",
-    "section": "",
-    "text": "Howto: ein Blog mit Quarto erstellen und diesen auf Github veröffentlichen\n\n\n\n\n\n\ncode\n\n\n\n\n\n\n\n\n\nSep 9, 2025\n\n\nFalk\n\n\n\n\n\n\n\n\n\n\n\n\nGedanken\n\n\n\n\n\n\ntest\n\n\n\n\n\n\n\n\n\nSep 19, 2024\n\n\nFalk\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "Hallo ich bin Falk.\nIch interessiere mich unter anderem für Informatik."
   },
   {
     "objectID": "posts/Gedanken und Spielwiese/Gedanken und Spielwiese.html",
@@ -75,5 +68,12 @@
     "title": "Gedanken",
     "section": "",
     "text": "\\[ f(x)= \\frac{1}{2} x^2 \\]"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Hallo ich bin Falk.\nIch interessiere mich unter anderem für Informatik."
   }
 ]
