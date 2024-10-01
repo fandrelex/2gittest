@@ -149,9 +149,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Inhalt:</h2>
    
   <ul>
-  <li><a href="#howtooo" id="toc-howtooo" class="nav-link active" data-scroll-target="#howtooo">Howtooo:</a>
+  <li><a href="#howto" id="toc-howto" class="nav-link active" data-scroll-target="#howto">Howto:</a>
   <ul class="collapse">
-  <li><a href="#quartooo-auf-dem-betriebssystem-installieren" id="toc-quartooo-auf-dem-betriebssystem-installieren" class="nav-link" data-scroll-target="#quartooo-auf-dem-betriebssystem-installieren">1. Quartooo auf dem Betriebssystem installieren</a></li>
+  <li><a href="#quartou-auf-dem-betriebssystem-installieren" id="toc-quartou-auf-dem-betriebssystem-installieren" class="nav-link" data-scroll-target="#quartou-auf-dem-betriebssystem-installieren">1. Quartou auf dem Betriebssystem installieren</a></li>
   <li><a href="#eine-virtuelle-umgebung-mit-python-erstellen" id="toc-eine-virtuelle-umgebung-mit-python-erstellen" class="nav-link" data-scroll-target="#eine-virtuelle-umgebung-mit-python-erstellen">2. Eine virtuelle Umgebung mit Python erstellen:</a></li>
   <li><a href="#ein-neues-blog-projekt-erstellen" id="toc-ein-neues-blog-projekt-erstellen" class="nav-link" data-scroll-target="#ein-neues-blog-projekt-erstellen">3. Ein neues Blog-Projekt erstellen:</a></li>
   <li><a href="#github-repository-erstellen-in-dem-nacher-die-daten-liegen-sollen" id="toc-github-repository-erstellen-in-dem-nacher-die-daten-liegen-sollen" class="nav-link" data-scroll-target="#github-repository-erstellen-in-dem-nacher-die-daten-liegen-sollen">4. Github Repository erstellen in dem nacher die Daten liegen sollen</a></li>
@@ -200,15 +200,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>diese datei wurde aus dem ersten Versuch blog kopiert</p>
-<section id="howtooo" class="level2">
-<h2 class="anchored" data-anchor-id="howtooo">Howtooo:</h2>
+<section id="howto" class="level2">
+<h2 class="anchored" data-anchor-id="howto">Howto:</h2>
 <p>Ein Blog mit <a href="https://quarto.org/">Quarto</a> erstellen das die Daten auf GitHub speichert und dort veröffentlicht.</p>
 <blockquote class="blockquote">
 <p>Quarto ist ein Tool mit dem aus u.a. aus Jupyter Notebooks Dokumente erstellt werden können<br>
 Dokumente wie PDF und auch HTML und Blogs</p>
 </blockquote>
-<section id="quartooo-auf-dem-betriebssystem-installieren" class="level3">
-<h3 class="anchored" data-anchor-id="quartooo-auf-dem-betriebssystem-installieren">1. Quartooo auf dem Betriebssystem installieren</h3>
+<section id="quartou-auf-dem-betriebssystem-installieren" class="level3">
+<h3 class="anchored" data-anchor-id="quartou-auf-dem-betriebssystem-installieren">1. Quartou auf dem Betriebssystem installieren</h3>
 <p>auf <a href="https://quarto.org/docs/get-started/">Quarto</a> die passende Installationsdatei auswählen und installieren.</p>
 </section>
 <section id="eine-virtuelle-umgebung-mit-python-erstellen" class="level3">
@@ -237,13 +237,17 @@ Dokumente wie PDF und auch HTML und Blogs</p>
 <h3 class="anchored" data-anchor-id="dateitransfer-vom-lokalen-system-nach-github">5. Dateitransfer vom lokalen System nach Github</h3>
 <p>hierfür habe ich eine .cmd Datei erstellt, die den Blog rendert, die Dateien in ein ansonsten leeres Verzeinis (hier: <code>_Github_online</code>) kopiert und von da aus dann zu Github transferiert. Das Script sieht so aus:</p>
 <p>veroeffentlichen.cmd</p>
-<pre><code>xcopy /S /C /Y C:\xx\myblog_fad\_site\* C:\xx\_GitHub_online\
+<pre><code>quarto render ./myblog_fad/
 
 cd _GitHub_online
+git pull
+
+xcopy /S /C /Y C:\Python\Daten\virtal_environments\quarto_blog2\myblog_fad\_site\* C:\Python\Daten\virtal_environments\quarto_blog2\_GitHub_online\
 
 git add .
 git commit -m "update"
-git push origin main</code></pre>
+git push https://fandrelex:_XXXX_@github.com/fandrelex/2gittest.git</code></pre>
+<p>Da ich von zwei Systemen aus arbeite, muss ich zuerst im temporären Verzeichnis “GitHub_online” den aktuellen Zustand von git herunterladen. Danach kann ich erst die Dateien in dieses Verzeinis kopieren und den commit usw. durchführen.</p>
 </section>
 </section>
 <section id="todo" class="level2">
