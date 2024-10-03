@@ -9,7 +9,7 @@
 <meta name="author" content="Falk">
 <meta name="dcterms.date" content="2025-09-09">
 
-<title>Howto: ein Blog mit Quarto erstellen und diesen auf Github veröffentlichen – Falk’s Blog</title>
+<title>testeintrag – Falk’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,32 +110,15 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Inhalt:</h2>
-   
-  <ul>
-  <li><a href="#howto" id="toc-howto" class="nav-link active" data-scroll-target="#howto">Howto:</a>
-  <ul class="collapse">
-  <li><a href="#quarto-auf-dem-betriebssystem-installieren" id="toc-quarto-auf-dem-betriebssystem-installieren" class="nav-link" data-scroll-target="#quarto-auf-dem-betriebssystem-installieren">1. Quarto auf dem Betriebssystem installieren</a></li>
-  <li><a href="#eine-virtuelle-umgebung-mit-python-erstellen" id="toc-eine-virtuelle-umgebung-mit-python-erstellen" class="nav-link" data-scroll-target="#eine-virtuelle-umgebung-mit-python-erstellen">2. Eine virtuelle Umgebung mit Python erstellen:</a></li>
-  <li><a href="#ein-neues-blog-projekt-erstellen" id="toc-ein-neues-blog-projekt-erstellen" class="nav-link" data-scroll-target="#ein-neues-blog-projekt-erstellen">3. Ein neues Blog-Projekt erstellen:</a></li>
-  <li><a href="#github-repository-erstellen-in-dem-nacher-die-daten-liegen-sollen" id="toc-github-repository-erstellen-in-dem-nacher-die-daten-liegen-sollen" class="nav-link" data-scroll-target="#github-repository-erstellen-in-dem-nacher-die-daten-liegen-sollen">4. Github Repository erstellen in dem nacher die Daten liegen sollen</a></li>
-  <li><a href="#einen-github-access-token-erstellen" id="toc-einen-github-access-token-erstellen" class="nav-link" data-scroll-target="#einen-github-access-token-erstellen">5. Einen Github access Token erstellen:</a></li>
-  <li><a href="#einen-blogeintrag-erstellen" id="toc-einen-blogeintrag-erstellen" class="nav-link" data-scroll-target="#einen-blogeintrag-erstellen">6. Einen Blogeintrag erstellen</a></li>
-  <li><a href="#dateitransfer-vom-lokalen-system-nach-github" id="toc-dateitransfer-vom-lokalen-system-nach-github" class="nav-link" data-scroll-target="#dateitransfer-vom-lokalen-system-nach-github">7. Dateitransfer vom lokalen System nach Github</a></li>
-  </ul></li>
-  <li><a href="#todo" id="toc-todo" class="nav-link" data-scroll-target="#todo">Todo:</a></li>
-  <li><a href="#dieses-howto-basiert-auf-der-online-dokuemntation-von-quarto" id="toc-dieses-howto-basiert-auf-der-online-dokuemntation-von-quarto" class="nav-link" data-scroll-target="#dieses-howto-basiert-auf-der-online-dokuemntation-von-quarto">Dieses Howto basiert auf der Online Dokuemntation von Quarto:</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Howto: ein Blog mit Quarto erstellen und diesen auf Github veröffentlichen</h1>
+<h1 class="title">testeintrag</h1>
   <div class="quarto-categories">
     <div class="quarto-category">code</div>
   </div>
@@ -167,126 +150,9 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="howto" class="level2">
-<h2 class="anchored" data-anchor-id="howto">Howto:</h2>
-<p>Ein Blog mit <a href="https://quarto.org/">Quarto</a> erstellen das die Daten auf GitHub speichert und dort veröffentlicht.</p>
-<blockquote class="blockquote">
-<p>Quarto ist ein Tool mit dem aus u.a. aus Jupyter Notebooks Dokumente erstellt werden können.<br>
-Dokumente wie PDF und auch HTML und Blogs</p>
-</blockquote>
-<section id="quarto-auf-dem-betriebssystem-installieren" class="level3">
-<h3 class="anchored" data-anchor-id="quarto-auf-dem-betriebssystem-installieren">1. Quarto auf dem Betriebssystem installieren</h3>
-<p>auf <a href="https://quarto.org/docs/get-started/">Quarto</a> die passende Installationsdatei auswählen und installieren.</p>
-</section>
-<section id="eine-virtuelle-umgebung-mit-python-erstellen" class="level3">
-<h3 class="anchored" data-anchor-id="eine-virtuelle-umgebung-mit-python-erstellen">2. Eine virtuelle Umgebung mit Python erstellen:</h3>
-<p>Sollte Python noch nicht installiert sein, dieses installieren und im Terminal / Powershell folgende Befehle ausführen: - in einem geeigneten Verzeichnis <code>python -m venv meinblog</code> ausführen. - danach Jupyter-Lab installieren <code>pip install jupyterlab</code> mit dem der Blog editiert wird.</p>
-</section>
-<section id="ein-neues-blog-projekt-erstellen" class="level3">
-<h3 class="anchored" data-anchor-id="ein-neues-blog-projekt-erstellen">3. Ein neues Blog-Projekt erstellen:</h3>
-<p><code>quarto create-project meinblog --type website:blog</code></p>
-<p>Die Blog Dateien liegen im Unterordner <strong>meinblog</strong> und sind erst mal .qmd Dateien. Ich werden aber mit Jupyter Notebooks arbeiten. Um einen neuen Blogeintrag zu erstellen wird im Ordner /meinblog/posts/ ein neuer Ordner angelegt und in diesem ein neues Notebook erstellt.</p>
-<p>Zum starten des Jupyter-Lab habe ich ein kleines Powershell - Script erstellt, das die Virtuelle Umgebung aktiviert, Jupyterlab startet und die Vorschau des Blog aufruft, damit die Änderungen sofort sichtbar sind:</p>
-<p>Startwin.ps1</p>
-<pre><code>.\Scripts\activate
-start  jupyter-lab
-
-quarto preview myblog_fad</code></pre>
-</section>
-<section id="github-repository-erstellen-in-dem-nacher-die-daten-liegen-sollen" class="level3">
-<h3 class="anchored" data-anchor-id="github-repository-erstellen-in-dem-nacher-die-daten-liegen-sollen">4. Github Repository erstellen in dem nacher die Daten liegen sollen</h3>
-<ul>
-<li>In <a href="https://www.github.com">Github</a> ein neues Repository erstellen: Auf der Githubseite <strong>“NEW”</strong>. Der Name entspricht nachher der Adresse des Blog. Z.B. “trashtest” -&gt; <a href="https://fandrelex.github.io/trashtest/">https://fandrelex.github.io/trashtest/</a></li>
-<li>pages aktivieren: Im Repositore oben auf <strong>“Settings”</strong>, links den Eintrag <strong>“Pages”</strong> suchen, dann rechts auf <strong>“Build and deployment”</strong> und <strong>“Deply´oy from a branch”</strong> und den Branch <strong>“main”</strong> auswählen.</li>
-<li>Unterhalb des oben erstellten Verzeichnisses für die virtuelle Umgebung ein Unterverzeichnis erstellen das nachher die Verbindung zu Github darstellen wird. Z.B. <code>_GitHub_online</code></li>
-<li>in dieses Verzeichnis wechseln und das Repository clonen mit <code>git clone https://github.com/fandrelex/trashtest.git</code>.</li>
-</ul>
-</section>
-<section id="einen-github-access-token-erstellen" class="level3">
-<h3 class="anchored" data-anchor-id="einen-github-access-token-erstellen">5. Einen Github access Token erstellen:</h3>
-<p>Dieser wird benötigt, um die Dateien per script nach Github zu übertragen. Alle Hinweise und Anweisungen durchlesen!</p>
-<ul>
-<li>in Github unter dem Account (oben links) auf <strong>“Settings”</strong> gehen</li>
-<li>dann auf der linken Seite ganz unten <strong>“developer Settings”</strong></li>
-<li><strong>“personal access tokens”</strong>, <strong>“Tokens (classic)”</strong></li>
-<li><strong>“generate new Token”</strong> im rechten Fenster nochmal <strong>“generate new Token”</strong></li>
-<li>für den Token eine Beschreibung eingeben</li>
-<li>die Rchte für den Token setzen -&gt; hier alles von <strong>“Repo”</strong></li>
-<li>gewünschtes Verfalldatum eingeben z.B. auf 30 Tage lassen. Wenn dieser Zeitraum abgelaufen ist muss zum übertragen von Änderungen am Blog ein neuer Token erzeugt werden!</li>
-<li>ganz unten auf <strong>“generate Token”</strong></li>
-<li><strong>“Stellen Sie sicher, dass Sie Ihr persönliches Zugangs-Token jetzt kopieren. Sie werden es nicht mehr sehen können!”</strong> also den Token an einem sicheren Ort speichern!</li>
-</ul>
-</section>
-<section id="einen-blogeintrag-erstellen" class="level3">
-<h3 class="anchored" data-anchor-id="einen-blogeintrag-erstellen">6. Einen Blogeintrag erstellen</h3>
-<p>zum testen erstellen wir ein ersten Blogeintrag</p>
-<ul>
-<li>in das Verzeichnis wechseln, in dem unter Punkt 3 das Blog Projekt erstellt wurde.</li>
-<li>hier die virtuelle Umgebung starten: <code>./scirpts/activate</code></li>
-<li>hier <code>jupyterlab</code> aufrufen</li>
-<li>es öffnet sich ein Browser Fenster mit der Jupyterlab Umgebung. Hier werden die Einträge erstellt bzw. bearbeitet.</li>
-<li>links den Dateibereich aktivieren und in das Verzeichnis <strong>“meinblog”</strong> wechseln.</li>
-<li>die Blogeinträge befinden sich unter <strong>“posts”</strong></li>
-<li>hier erstellen wir ein neues Verzeichnis, z.B. <strong>“testeintrag”</strong></li>
-<li>in diesem Verzeichnis erstellen wir eine neue Datei mit <strong>“File”</strong> -&gt; <strong>“new”</strong> -&gt; <strong>“Notebook”</strong></li>
-<li>als erste cell wird als <strong>“Raw”</strong> erstellt und bekommt diesen Inhalt:</li>
-</ul>
-<pre><code>---
-title: "testeintrag"  
-author: "Falk"
-date: "21/09/2024"
-categories: [code]
-format: 
-  html:
-    code-fold: true
-toc: true
-toc-title: "Inhalt:"
-highlight-style: pygments
----</code></pre>
-<ul>
-<li>darunter wird dann eine neue Cell eingefügt dieses mal als Markdown</li>
-<li>Ihnalt ist beliebig, z.B. “Hallo Welt”</li>
-<li>in Jupyterlab unter <strong>“File”</strong> ein neues <strong>“Terminal”</strong> Fenster öffnen und in diesem sicherstellen, dass man sich im Verzeichnis oberhalb von <strong>“meinblog”</strong> befindet und zu starten der Vorschau dieses eingibt</li>
-<li><code>quarto preview meinblog</code></li>
-<li>dann öffnet sich ein Browserfenser in dem man den Blog testen kann.</li>
-</ul>
-</section>
-<section id="dateitransfer-vom-lokalen-system-nach-github" class="level3">
-<h3 class="anchored" data-anchor-id="dateitransfer-vom-lokalen-system-nach-github">7. Dateitransfer vom lokalen System nach Github</h3>
-<p>hierfür habe ich eine .cmd Datei erstellt, die den Blog rendert, also aus den Jupyter Notebooks eine Webseite erstelt, die Dateien in ein ansonsten leeres Verzeichnis (hier: <code>_Github_online</code>) kopiert und von da aus dann zu Github transferiert. Zum testen am Anfang kann man diese Befehler nacheinander im Terminal eingeben. Das Script sieht so aus:</p>
-<p>veroeffentlichen.cmd</p>
-<pre><code>quarto render ./myblog_fad/ 
-
-cd _GitHub_online
-git pull origin main
-
-xcopy /S /C /Y C:\Python\Daten\virtal_environments\quarto_blog2\myblog_fad\_site\* C:\Python\Daten\virtal_environments\quarto_blog2\_GitHub_online\
-
-git add .
-git commit -m "update"
-git push https://fandrelex:_XXXX_@github.com/fandrelex/2gittest.git</code></pre>
-<p>Für den Fall, dass die Daten von woanders geändert wurden werden wird zuerst im temporären Verzeichnis “GitHub_online” der aktuellen Zustand von git heruntergeladen. Danach können die Dateien in dieses Verzeichnis kopiert und von dort aus zu Github transferiert werden.</p>
-</section>
-</section>
-<section id="todo" class="level2">
-<h2 class="anchored" data-anchor-id="todo">Todo:</h2>
-<ul>
-<li><label><input type="checkbox" checked="">installation von quarto (Betriebssystem nicht Python)</label></li>
-<li><label><input type="checkbox" checked="">installation von … keine Ahnung was kam da noch so? Eigentlich nur noch dei Virtuelle Umgebung erstellen mit <code>python -m venv quarto-bog</code></label></li>
-<li><label><input type="checkbox" checked="">erzeugen eines Repos in Github</label></li>
-<li><label><input type="checkbox" checked="">erzeugen des “schlüssels” in Github</label></li>
-<li><label><input type="checkbox">aktivieren des lokalen caches für den Schlüssel - wasn das?</label></li>
-<li><label><input type="checkbox">erstellen einer Seite</label></li>
-<li><label><input type="checkbox" checked="">veröffentlichen. Am besten mit einem Script, das alle schritte automatisch durchführt</label></li>
-<li>[ ]</li>
-</ul>
-</section>
-<section id="dieses-howto-basiert-auf-der-online-dokuemntation-von-quarto" class="level2">
-<h2 class="anchored" data-anchor-id="dieses-howto-basiert-auf-der-online-dokuemntation-von-quarto">Dieses Howto basiert auf der Online Dokuemntation von Quarto:</h2>
-<p><a href="https://quarto.org/docs/websites/website-blog.html">Creating a Blog</a></p>
+<p>hallo welt</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

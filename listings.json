@@ -2,6 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/Untitled.html",
+      "/posts/testeintrag/testeintrag.html",
       "/posts/howto quarto blog/howto quarto blog.html",
       "/posts/Gedanken und Spielwiese/Gedanken und Spielwiese.html"
     ]
