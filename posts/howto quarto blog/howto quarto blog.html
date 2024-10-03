@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Falk">
-<meta name="dcterms.date" content="2025-09-09">
+<meta name="dcterms.date" content="2024-10-03">
 
 <title>Howto: ein Blog mit Quarto erstellen und diesen auf Github veröffentlichen – Falk’s Blog</title>
 <style>
@@ -125,7 +125,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#einen-blogeintrag-erstellen" id="toc-einen-blogeintrag-erstellen" class="nav-link" data-scroll-target="#einen-blogeintrag-erstellen">6. Einen Blogeintrag erstellen</a></li>
   <li><a href="#dateitransfer-vom-lokalen-system-nach-github" id="toc-dateitransfer-vom-lokalen-system-nach-github" class="nav-link" data-scroll-target="#dateitransfer-vom-lokalen-system-nach-github">7. Dateitransfer vom lokalen System nach Github</a></li>
   </ul></li>
-  <li><a href="#todo" id="toc-todo" class="nav-link" data-scroll-target="#todo">Todo:</a></li>
   <li><a href="#dieses-howto-basiert-auf-der-online-dokuemntation-von-quarto" id="toc-dieses-howto-basiert-auf-der-online-dokuemntation-von-quarto" class="nav-link" data-scroll-target="#dieses-howto-basiert-auf-der-online-dokuemntation-von-quarto">Dieses Howto basiert auf der Online Dokuemntation von Quarto:</a></li>
   </ul>
 </nav>
@@ -155,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 9, 2025</p>
+      <p class="date">October 3, 2024</p>
     </div>
   </div>
   
@@ -223,7 +222,7 @@ quarto preview myblog_fad</code></pre>
 <ul>
 <li>in das Verzeichnis wechseln, in dem unter Punkt 3 das Blog Projekt erstellt wurde.</li>
 <li>hier die virtuelle Umgebung starten: <code>./scirpts/activate</code></li>
-<li>hier <code>jupyterlab</code> aufrufen</li>
+<li>hier <code>jupyter-lab</code> aufrufen</li>
 <li>es öffnet sich ein Browser Fenster mit der Jupyterlab Umgebung. Hier werden die Einträge erstellt bzw. bearbeitet.</li>
 <li>links den Dateibereich aktivieren und in das Verzeichnis <strong>“meinblog”</strong> wechseln.</li>
 <li>die Blogeinträge befinden sich unter <strong>“posts”</strong></li>
@@ -267,19 +266,6 @@ git commit -m "update"
 git push https://fandrelex:_XXXX_@github.com/fandrelex/2gittest.git</code></pre>
 <p>Für den Fall, dass die Daten von woanders geändert wurden werden wird zuerst im temporären Verzeichnis “GitHub_online” der aktuellen Zustand von git heruntergeladen. Danach können die Dateien in dieses Verzeichnis kopiert und von dort aus zu Github transferiert werden.</p>
 </section>
-</section>
-<section id="todo" class="level2">
-<h2 class="anchored" data-anchor-id="todo">Todo:</h2>
-<ul>
-<li><label><input type="checkbox" checked="">installation von quarto (Betriebssystem nicht Python)</label></li>
-<li><label><input type="checkbox" checked="">installation von … keine Ahnung was kam da noch so? Eigentlich nur noch dei Virtuelle Umgebung erstellen mit <code>python -m venv quarto-bog</code></label></li>
-<li><label><input type="checkbox" checked="">erzeugen eines Repos in Github</label></li>
-<li><label><input type="checkbox" checked="">erzeugen des “schlüssels” in Github</label></li>
-<li><label><input type="checkbox">aktivieren des lokalen caches für den Schlüssel - wasn das?</label></li>
-<li><label><input type="checkbox">erstellen einer Seite</label></li>
-<li><label><input type="checkbox" checked="">veröffentlichen. Am besten mit einem Script, das alle schritte automatisch durchführt</label></li>
-<li>[ ]</li>
-</ul>
 </section>
 <section id="dieses-howto-basiert-auf-der-online-dokuemntation-von-quarto" class="level2">
 <h2 class="anchored" data-anchor-id="dieses-howto-basiert-auf-der-online-dokuemntation-von-quarto">Dieses Howto basiert auf der Online Dokuemntation von Quarto:</h2>
